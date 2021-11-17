@@ -10,7 +10,8 @@ app.use('/getDevice', (req, res) => {
     res.status(200).json({ msg: parser.setUA(ua).getResult()});
 })
 
+const PORT = process.env.PORT || 8000;
 
-app.listen(8000, ()=>{
+app.listen(PORT, ()=>{
     console.log("Server Listening");
 })
